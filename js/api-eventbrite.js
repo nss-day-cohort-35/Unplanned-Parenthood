@@ -14,7 +14,6 @@ function addMeetupToDom(meetupInNash) {
 const meetupsNashville = (meetupInNash) => {
     return `<h4>${meetupInNash.name.text}</h4>
             <p>${meetupInNash.start.local.split("T")[0]}</p>
-            <p>${meetupInNash.end.local.split("T")[0]}</p>
             <p>${meetupInNash.summary}</p>`
 } 
 
