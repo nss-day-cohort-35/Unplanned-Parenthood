@@ -19,7 +19,10 @@ function addFoodToDom(foodInNash) {
  } 
  /* pulls name from the array*/
  const restaurantsNashville = (foodInNash) => {
-    return `<p>${foodInNash.restaurant.name}</p>`
+    return `<h4>${foodInNash.restaurant.name}</h4>
+    <p>${foodInNash.restaurant.location.address}</p>
+    <p>${foodInNash.restaurant.phone_numbers}</p>`
+
 } 
 
  const restoContainer = document.querySelector("#nashFood");
