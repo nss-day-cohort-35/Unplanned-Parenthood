@@ -12,7 +12,10 @@ function addMeetupToDom(meetupInNash) {
 
 /* pulls name from the array*/
 const meetupsNashville = (meetupInNash) => {
-    return `<p>${meetupInNash.name.text}</p>`
+    return `<h4>${meetupInNash.name.text}</h4>
+            <p>${meetupInNash.start.local.split("T")[0]}</p>
+            <p>${meetupInNash.end.local.split("T")[0]}</p>
+            <p>${meetupInNash.summary}</p>`
 } 
 
 const meetupContainer = document.querySelector("#nashMeetups");
