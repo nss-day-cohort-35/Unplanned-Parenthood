@@ -1,6 +1,6 @@
 
 const meetupSearch = (searchTerm) => {
-return fetch(`https://www.eventbriteapi.com/v3/events/search/?location.address=nashville&token=HHGEDIXLHO35AWYSVFRK`, 
+return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchTerm}&location.address=nashville&token=HHGEDIXLHO35AWYSVFRK`, 
       {
     "headers": {
         "Authorization": "Bearer HHGEDIXLHO35AWYSVFRK",
@@ -25,4 +25,4 @@ meetupInNash.forEach(meetupObj => {
 });}
 const meetupContainer = document.querySelector("#nashMeetups");
 /*calls function that contains fetch*/
-meetupSearch();
+meetupSearch("parenting");
