@@ -4,7 +4,7 @@ const parkSearch = (searchTerm) => {
       .then(parkData => parkData.json())
       .then(parsedParkData => {
           addParkToDom(parsedParkData)
-          console.log(parsedParkData)
+          console.table(parsedParkData)
       }   )
    } 
    /* pulls name from the array*/
