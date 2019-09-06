@@ -4,5 +4,7 @@ This app allows users to search options to plan trip itineraries. The target use
 
 To download and run this application: 
 
+* 
+
 
 
