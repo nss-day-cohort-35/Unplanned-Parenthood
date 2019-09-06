@@ -16,7 +16,11 @@ const concertsSearch = (searchTerm) => {
     })}
 /* pulls name from the array*/
 const concertsNashville = (concertsInNash) => {
-    return `<p>${concertsInNash.name}</p>`
+    return `<h4>${concertsInNash.name}</h4>
+            <p>${concertsInNash.dates.start.localDate}</p>
+            <p>${concertsInNash.dates.start.localTime}</p>
+            <p>${concertsInNash._embedded.venues[0].name}</p>
+            `
 } 
  const concertsContainer = document.querySelector("#concertsNash");
 /*calls function that contains fetch*/
