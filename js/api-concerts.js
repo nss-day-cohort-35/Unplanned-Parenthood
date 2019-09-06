@@ -1,5 +1,5 @@
 const concertsSearch = (searchTerm) => {
-    return fetch("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&city=nashville&radius=25&apikey=c5nNRGJ3HT9cjlyJiIc9YtjOrc3Tt4IV")
+    return fetch(`https://app.ticketmaster.com/discovery/v2/events/?keyword=${searchTerm}&city=nashville&apikey=c5nNRGJ3HT9cjlyJiIc9YtjOrc3Tt4IV`)
     .then(concerts => concerts.json())
     .then(parsedConcerts => {
         addConcertsToDom(parsedConcerts._embedded.events)
@@ -16,4 +16,4 @@ concertsInNash.forEach(concertsObj => {
 });}
  const concertsContainer = document.querySelector("#concertsNash");
 /*calls function that contains fetch*/
- concertsSearch();
+ concertsSearch("dion");
