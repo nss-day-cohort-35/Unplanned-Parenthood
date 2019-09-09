@@ -10,51 +10,54 @@
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body class="img">
-        <h1>Welcome to Nashville</h1>
-
-        <header>
-                <!--Nav bar with external links for parents-->
-                <nav>
-<hr>
-<p>Hey, new parents! Before you throw your baby out the window, make sure you take some you-time. Use this site to craft your perfect weekend away from your precious beautiful angel unique snowflake.</p>
-                </nav>
-            </header>
-    <div>
-        <h2>Plan Your Weekend</h2>
+    <h1>Welcome to Nashville</h1>
+    <header>
+    <!--Nav bar with external links for parents-->
+        <nav>
+            <hr>
+            <h2 id="parentsHeader">Hey, new parents!</h2>
+            <p>Before you throw your baby out the window, make sure you take some you-time. Use this site to craft your perfect weekend away from your precious beautiful angel unique snowflake.</p>
+        </nav>
+    </header>
+    <div class="bannerImage">
+        <img src="images/DiagonalParents.png" alt="New parents: Don't hate your life. Come to Nashville.">
+    </div>
     <form> <!--search for events-->
+        <h2 class="planHeader">Plan Your Weekend</h2>
         <fieldset>
-         <label for=""> Parks</label>
-         <div class="inputFlex">
-         <input type="text" name="" id="parkInput"> 
-        </div>
-         <button type="button" id="parksButton">Search</button>
-         <div id="nashParks"></div>
+            <label for=""></label>
+            <div class="inputFlex">
+            <input placeholder="Search Nashville-area parks by feature, i.e, 'Playground'" type="text" name="" id="parkInput"> 
+            </div>
+            <button type="button" id="parksButton">Search Parks</button>
+            <div id="nashParks"></div>
         </fieldset>
         <fieldset>
-            <label for=""> Restaurants</label>
+            <label for="Search "></label>
             <div class="inputFlex">
-            <input type="text" name="" id="restaurantInput">
+            <input placeholder="Search the best restaurants in Nashville" type="text" name="" id="restaurantInput">
             </div>
-            <button type="button" id="restaurantsButton">Search</button>
+            <button type="button" id="restaurantsButton">Search Restaurants</button>
             <div id="nashFood"></div>
         </fieldset>
         <fieldset>
-            <label for=""> Meetups</label>
+            <label for=""></label>
             <div class="inputFlex">
-            <input type="text" name="" id="meetupInput">
+            <input placeholder="Get inspired with interesting events" type="text" name="" id="meetupInput">
             </div>
-            <button type="button" id="meetupButton">Search</button>
+            <button type="button" id="meetupButton">Search Events</button>
             <div id="nashMeetups"></div>
         </fieldset>
         <fieldset>
-            <label for="">Concerts </label>
+            <label for=""></label>
             <div class="inputFlex">
-            <input type="text" name="" id="concertsInput">
+                <input placeholder="Search upcoming concerts only Nashville can offer" type="text" name="" id="concertsInput">
             </div>
-            <button type="button" id="concertsButton">Search</button>
+            <button type="button" id="concertsButton">Search Concerts</button>
             <div id="concertsNash"></div>
         </fieldset>
     </form>
+
     <section id="results-container"> <!--Results from search-->
     </section>
     <section id="itinerary-container"> <!--Itinerary-->
@@ -63,11 +66,14 @@
         <section id="restaurantSelection"></section>
         <section id="meetupSelection"></section>
         <section id="concertsSelection"></section>
+    </section>  
+    <section id="helpfulLinks">
+        <p><a href="http://elitenanniesofnashville.com/">Get a babysitter</a></p>
+        <p><a href="https://weather.com/weather/tenday/l/Nashville+TN+USTN0357:1:US">Check the weather</a></p>
+    </section> 
 
-    </section>   
-</div>
     <footer> <!--Footer-->
-        <h3>Unplanned Parenthood &copy;</h3>
+        <h3>&copy; Unplanned Parenthood</h3>
     </footer>
     <!--javascript files-->
     <script src="js/main.js"></script>
