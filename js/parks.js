@@ -16,6 +16,7 @@ const parkContainer = document.querySelector("#nashParks");
 }
 
    /* pulls name from the array*/
+   
 const parksNashville = (parksInNash) => {
     return `
     <h4 id="${parksInNash.park_name.split(" ")[0]}">${parksInNash.park_name}</h4>
@@ -30,7 +31,6 @@ const parkSearch = (searchTerm) => {
     .then(parkData => parkData.json())
     .then(parsedParkData => {
         addParkToDom(parsedParkData)
-        console.table(parsedParkData)
         })   
 }
 
