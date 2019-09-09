@@ -1,22 +1,30 @@
 /* parkSearch is a variable that runs a function (return fetch). Fetch accesses the API data and converts it into a format that JavaScript can read (parkData => parkData.json()). That readable data is then run through the function "addParkToDom" in order to be displayed on your webpage. */
 document.querySelector("#parksButton").addEventListener("click", () =>{    
     let userInput = document.querySelector("#parkInput").value
-    parkSearch(userInput);
-})
- /*display restaurant names to the dom*/
+    let underscoreInput = userInput.split(" ").join("_")
+    parkSearch(underscoreInput);
+})    
+
+/* Where park search results are displayed */
+const parkContainer = document.querySelector("#nashParks");
+
+ /*display park names to the dom*/
  function addParkToDom(parksInNash) {
     parksInNash.forEach(parkObj => {
         parkContainer.innerHTML += parksNashville(parkObj);
         });
 }
+
    /* pulls name from the array*/
+   
 const parksNashville = (parksInNash) => {
-    return `<h4>${parksInNash.park_name}</h4>
+    return `
+    <h4 id="${parksInNash.park_name.split(" ")[0]}">${parksInNash.park_name}</h4>
     <p>${parksInNash.mapped_location_address}</p>
     <p>${parksInNash.mapped_location_city}, ${parksInNash.mapped_location_state}</p>
+    <button type="button" id="parksSaveButton--${parksInNash.park_name.split(" ")[0]}">Save</button> 
     `
 } 
-const parkContainer = document.querySelector("#nashParks");
 
 const parkSearch = (searchTerm) => {
     return fetch(`https://data.nashville.gov/resource/xbru-cfzi.json?${searchTerm}=Yes&$$app_token=aH0AJvaMzg4KccAFcjktXYfIe`)
@@ -25,10 +33,16 @@ const parkSearch = (searchTerm) => {
         addParkToDom(parsedParkData)
         console.table(parsedParkData)
         })   
-
-
- 
-   
-  /*calls function that contains fetch*/
-   
 }
+
+parkContainer.addEventListener("click", event => {
+    if(event.target.id.startsWith("parksSaveButton")){
+        let parkId = event.target.id.split("--")[1]
+        let parkTitle = document.getElementById(parkId)
+        let parkSelection = document.querySelector("#parksSelection")
+        parkSelection.appendChild(parkTitle)
+        parkContainer.innerHTML = "";
+    }
+})
+
+
