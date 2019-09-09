@@ -9,40 +9,48 @@
     <!--Css Files-->
     <link href="css/main.css" rel="stylesheet">
 </head>
-<header>
-    
-    <!--Nav bar with external links for parents-->
-    <nav>
-        <h3>Helpful Links for Parents</h3>
-    </nav>
-</header>
-
 <body class="img">
-    <h1>Welcome to Nashville</h1>
+        <h1>Welcome to Nashville</h1>
+
+        <header>
+                <!--Nav bar with external links for parents-->
+                <nav>
+<hr>
+<p>Hey, new parents! Before you throw your baby out the window, make sure you take some you-time. Use this site to craft your perfect weekend away from your precious beautiful angel unique snowflake.</p>
+                </nav>
+            </header>
     <div>
         <h2>Plan Your Weekend</h2>
     <form> <!--search for events-->
         <fieldset>
          <label for=""> Parks</label>
-         <input type="text" name="" id="parkInput">
+         <div class="inputFlex">
+         <input type="text" name="" id="parkInput"> 
+        </div>
          <button type="button" id="parksButton">Search</button>
          <div id="nashParks"></div>
         </fieldset>
         <fieldset>
             <label for=""> Restaurants</label>
+            <div class="inputFlex">
             <input type="text" name="" id="restaurantInput">
+            </div>
             <button type="button" id="restaurantsButton">Search</button>
             <div id="nashFood"></div>
         </fieldset>
         <fieldset>
             <label for=""> Meetups</label>
+            <div class="inputFlex">
             <input type="text" name="" id="meetupInput">
+            </div>
             <button type="button" id="meetupButton">Search</button>
             <div id="nashMeetups"></div>
         </fieldset>
         <fieldset>
             <label for="">Concerts </label>
+            <div class="inputFlex">
             <input type="text" name="" id="concertsInput">
+            </div>
             <button type="button" id="concertsButton">Search</button>
             <div id="concertsNash"></div>
         </fieldset>
@@ -50,7 +58,7 @@
     <section id="results-container"> <!--Results from search-->
     </section>
     <section id="itinerary-container"> <!--Itinerary-->
-        <h2>My Itinerary:</h2>
+        <h2 class="itinerary-header">My Itinerary:</h2>
         <section id="parksSelection"></section>
         <section id="restaurantSelection"></section>
         <section id="meetupSelection"></section>
@@ -59,7 +67,7 @@
     </section>   
 </div>
     <footer> <!--Footer-->
-        <h3>Unplanned Parenthood</h3>
+        <h3>Unplanned Parenthood &copy;</h3>
     </footer>
     <!--javascript files-->
     <script src="js/main.js"></script>
