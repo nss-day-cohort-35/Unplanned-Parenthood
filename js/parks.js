@@ -4,14 +4,8 @@ document.querySelector("#parksButton").addEventListener("click", () =>{
     parkSearch(userInput);
 })    
 
-const parkSearch = (searchTerm) => {
-    return fetch(`https://data.nashville.gov/resource/xbru-cfzi.json?${searchTerm}=Yes&$$app_token=aH0AJvaMzg4KccAFcjktXYfIe`)
-    .then(parkData => parkData.json())
-    .then(parsedParkData => {
-        addParkToDom(parsedParkData)
-        console.table(parsedParkData)
-        })   
-}
+
+const parkContainer = document.querySelector("#nashParks");
 
  /*display restaurant names to the dom*/
  function addParkToDom(parksInNash) {
@@ -27,12 +21,16 @@ const parksNashville = (parksInNash) => {
     <p>${parksInNash.mapped_location_city}, ${parksInNash.mapped_location_state}</p>
     <button type="button" id="parksSaveButton">${parksInNash.restaurant="Save"}</button> 
     `
-    .then(() => {
-        document.getElementByClass("#parksInput").value = ''
-    })
 } 
 
-const parkContainer = document.querySelector("#nashParks");
+const parkSearch = (searchTerm) => {
+    return fetch(`https://data.nashville.gov/resource/xbru-cfzi.json?${searchTerm}=Yes&$$app_token=aH0AJvaMzg4KccAFcjktXYfIe`)
+    .then(parkData => parkData.json())
+    .then(parsedParkData => {
+        addParkToDom(parsedParkData)
+        console.table(parsedParkData)
+        })   
+}
 
 
 
