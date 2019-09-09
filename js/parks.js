@@ -31,7 +31,6 @@ const parkSearch = (searchTerm) => {
     .then(parkData => parkData.json())
     .then(parsedParkData => {
         addParkToDom(parsedParkData)
-        console.table(parsedParkData)
         })   
 }
 
