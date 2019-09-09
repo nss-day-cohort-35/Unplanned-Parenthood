@@ -26,8 +26,8 @@ const restaurantSearch = (searchTerm) => {
     <p>${foodInNash.restaurant.phone_numbers}</p>
     <button type="button" id="restaurantSaveButton--${foodInNash.id}">${foodInNash.restaurant="Save"}</button> 
     `
-        // creates save button
  }
+ /*when button is clicked this makes the name print to dom in the itinerary section */
 restoContainer.addEventListener("click", event => {
     if (event.target.id.startsWith("restaurantSaveButton")
     ) {let eventID = event.target.id.split("--")[1]
