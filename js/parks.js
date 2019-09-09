@@ -16,7 +16,6 @@ const parksNashville = (parksInNash) => {
     <p>${parksInNash.mapped_location_city}, ${parksInNash.mapped_location_state}</p>
     `
 } 
-
 const parkContainer = document.querySelector("#nashParks");
 
 const parkSearch = (searchTerm) => {
