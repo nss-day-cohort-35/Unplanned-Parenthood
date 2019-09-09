@@ -1,11 +1,47 @@
-nav {
-background-color: #0BC63E;
-}
-footer {
-    background-color: #0BC63E;
-}
+/* result buttons*/
 .resultButtons {
     list-style-type: none;
 }
-  }
+/*rainbow banner*/
+hr { 
+    background: linear-gradient(45deg, rgba(69,202,211,1) 0%,rgba(69,202,211,1) 20%,rgba(109,179,242,1) 20%,rgba(255,113,91,1) 20%,rgba(255,113,91,1) 40%,rgba(249,203,64,1) 40%,rgba(249,203,64,1) 62%,rgba(188,237,9,1) 62%,rgba(188,237,9,1) 80%,rgba(23,147,123,1) 80%,rgba(23,147,123,1) 80%,rgba(23,147,123,1) 100%);
+     height: 50px;
+     border: none;
+}
+/* body of the page*/
+body{
+    margin: 30px 30px 30px 30px;
+    color: rgb(52, 48, 48);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* welcome to nashville*/
+h1 {
+    text-align: center;
+}
+h1, h3 {
+    font-weight: lighter;
+    text-align: center;
+}
+h2  {
+   font-weight: lighter;
+   text-align: left;
+}
+/*footer*/
+footer {
+    text-align: center;
+    padding-top: 3px;
+    background: linear-gradient(45deg, rgba(69,202,211,1) 0%,rgba(69,202,211,1) 20%,rgba(109,179,242,1) 20%,rgba(255,113,91,1) 20%,rgba(255,113,91,1) 40%,rgba(249,203,64,1) 40%,rgba(249,203,64,1) 62%,rgba(188,237,9,1) 62%,rgba(188,237,9,1) 80%,rgba(23,147,123,1) 80%,rgba(23,147,123,1) 80%,rgba(23,147,123,1) 100%);
+    height: 50px;
+    border: none;
+    font-weight: lighter;
+}
+/* styling for the input forms */
+form {
+    font-size: 20px;
+    background-color: #aad7cf;
+}
+fieldset {
+    border: none;   
+}
+
   

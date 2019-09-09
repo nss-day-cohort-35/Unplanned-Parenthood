@@ -12,7 +12,6 @@ const concertsSearch = (searchTerm) => {
     .then(concerts => concerts.json())
     .then(parsedConcerts => {
         addConcertsToDom(parsedConcerts._embedded.events)
-        console.log(parsedConcerts)
     })}
 /* pulls name from the array*/
 const concertsNashville = (concertsInNash) => {
@@ -29,7 +28,6 @@ const concertsNashville = (concertsInNash) => {
     if (event.target.id.startsWith("concertsSaveButton")
     ) {let eventID = event.target.id.split("--")[1]
        let eventTitle = document.getElementById(eventID)
-       console.log(eventTitle)
         let concertsSelection = document.querySelector("#concertsSelection")
         concertsSelection.appendChild(eventTitle)
         concertsContainer.innerHTML = "";
