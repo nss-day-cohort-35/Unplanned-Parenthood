@@ -7,3 +7,10 @@ footer {
 .resultButtons {
     list-style-type: none;
 }
+/* body {
+    background-image: url(../images/hatchShow2.png);
+    background-position: center; 
+    background-size: auto;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+} */
