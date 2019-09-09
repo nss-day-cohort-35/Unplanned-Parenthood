@@ -12,9 +12,10 @@ function addMeetupToDom(meetupInNash) {
 
 /* pulls name from the array*/
 const meetupsNashville = (meetupInNash) => {
-    return `<h4>${meetupInNash.name.text}</h4>
+    return `<h4 id="${meetupInNash.id}">${meetupInNash.name.text}</h4>
             <p>${meetupInNash.start.local.split("T")[0]}</p>
-            <p>${meetupInNash.summary}</p>`
+            <p>${meetupInNash.summary}</p>
+            <button type="button" id="MeetupSaveButton--${meetupInNash.id}">${meetupInNash.events="Save"}</button>`
 } 
 
 const meetupContainer = document.querySelector("#nashMeetups");
@@ -33,4 +34,17 @@ return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchTerm}&lo
         console.table(parsedMeetupData)
     })
 }
+
+meetupContainer.addEventListener("click", event => {
+    if (event.target.id.startsWith("MeetupSaveButton")
+    ) {let eventID = event.target.id.split("--")[1]
+       let eventTitle = document.getElementById(eventID)
+       console.log(eventTitle)
+        let meetupSelection = document.querySelector("#meetupSelection")
+        meetupSelection.appendChild(eventTitle)
+        meetupContainer.innerHTML = "";
+    }
+})
+
+
 

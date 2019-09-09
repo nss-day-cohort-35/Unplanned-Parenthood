@@ -21,10 +21,20 @@ const restaurantSearch = (searchTerm) => {
 
  /* pulls name from the array*/
  const restaurantsNashville = (foodInNash) => {
-    return `  <h4>${foodInNash.restaurant.name}</h4>
+    return `<h4  id="${foodInNash.id}">${foodInNash.restaurant.name}</h4>
     <p>${foodInNash.restaurant.location.address}</p>
     <p>${foodInNash.restaurant.phone_numbers}</p>
-    <button type="button" id="restaurantSaveButton">${foodInNash.restaurant="Save"}</button> 
+    <button type="button" id="restaurantSaveButton--${foodInNash.id}">${foodInNash.restaurant="Save"}</button> 
     `
         // creates save button
  }
+restoContainer.addEventListener("click", event => {
+    if (event.target.id.startsWith("restaurantSaveButton")
+    ) {let eventID = event.target.id.split("--")[1]
+       let eventTitle = document.getElementById(eventID)
+       console.log(eventTitle)
+        let restaurantSelection = document.querySelector("#restaurantSelection")
+        restaurantSelection.appendChild(eventTitle)
+        restoContainer.innerHTML = "";
+    }
+})
