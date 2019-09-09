@@ -2,7 +2,7 @@
 
 This app allows users to search options to plan trip itineraries. The target user is a new parent who may want to step away from their new baby and have some fun. 
 
-##To download and run this application: 
+## To download and run this application: 
 
 1. On Github, click "Clone or Download" this repository.
 2. Click "Clone with SSH."
@@ -19,7 +19,7 @@ This app allows users to search options to plan trip itineraries. The target use
 
 Enjoy!
 
-- Unplanned Parenthood 
+Unplanned Parenthood 
     (Mark, Lauren, Quin and Leigh from NSS Cohort 35)
 
 
