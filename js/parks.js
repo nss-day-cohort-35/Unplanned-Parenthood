@@ -4,24 +4,34 @@ document.querySelector("#parksButton").addEventListener("click", () =>{
     parkSearch(userInput);
 })    
 
-
+/* Where park search results are displayed */
 const parkContainer = document.querySelector("#nashParks");
 
- /*display restaurant names to the dom*/
+ /*display park names to the dom*/
  function addParkToDom(parksInNash) {
     parksInNash.forEach(parkObj => {
         parkContainer.innerHTML += parksNashville(parkObj);
         });
 }
+
    /* pulls name from the array*/
 const parksNashville = (parksInNash) => {
     return `
-    <h4>${parksInNash.park_name}</h4>
-    <p>${parksInNash.mapped_location_address}</p>
-    <p>${parksInNash.mapped_location_city}, ${parksInNash.mapped_location_state}</p>
-    <button type="button" id="parksSaveButton">${parksInNash.restaurant="Save"}</button> 
+    <h4 id="${parksInNash.park_name}">${parksInNash.park_name}</h4>
+    <p id="">${parksInNash.mapped_location_address}</p>
+    <p id="">${parksInNash.mapped_location_city}, ${parksInNash.mapped_location_state}</p>
+    <button type="button" id="parksSaveButton--">${parksInNash.restaurant="Save"}</button> 
     `
 } 
+
+parkContainer.addEventListener("click", event => {
+    if(park.target.index.startsWith("parksSaveButton")){
+        let parkId = park.target.id.split("--")[1]
+        let parkTitle = document.getElementById(parkId)
+        let parkSelection = document.querySelector("#parksSelection")
+        parkSelection.innerHTML += eventTitle
+    }
+})
 
 const parkSearch = (searchTerm) => {
     return fetch(`https://data.nashville.gov/resource/xbru-cfzi.json?${searchTerm}=Yes&$$app_token=aH0AJvaMzg4KccAFcjktXYfIe`)
