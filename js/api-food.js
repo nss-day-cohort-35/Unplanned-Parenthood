@@ -3,15 +3,6 @@ document.querySelector("#restaurantsButton").addEventListener("click", event => 
     let userInput = document.querySelector("#restaurantInput").value
     restaurantSearch(userInput);
 })
-
-
-
-// const restResults = () => {
-//     for (let i = 0; i < restaurantSearch.length; i++){
-   
-// }
-// }
-
 /*display restaurant names to the dom*/
 function addFoodToDom(foodInNash) {
     foodInNash.forEach(restaurantObj => {
@@ -25,7 +16,7 @@ const restaurantSearch = (searchTerm) => {
         addFoodToDom(parsedRestaurants.restaurants)
         console.log(parsedRestaurants)
     }   )
- } 
+}
  const restoContainer = document.querySelector("#nashFood");
 
  /* pulls name from the array*/
@@ -37,5 +28,3 @@ const restaurantSearch = (searchTerm) => {
     `
         // creates save button
  }
-
-
