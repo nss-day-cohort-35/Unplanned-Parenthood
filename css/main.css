@@ -7,28 +7,5 @@ footer {
 .resultButtons {
     list-style-type: none;
 }
-body {
-    width: 200px;
-    height: 200px;
-    display: block;
-    position: relative;
-  }
-  body::after {
-    content: "";
-    background: url(../images/hatchShow.jpg);
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
   }
   
-/* body {
-    background-image: url(../images/hatchShow2.png);
-    background-position: center; 
-    background-size: auto;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-} */
