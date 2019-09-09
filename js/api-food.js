@@ -14,7 +14,6 @@ const restaurantSearch = (searchTerm) => {
     .then(restaurants => restaurants.json())
     .then(parsedRestaurants => {
         addFoodToDom(parsedRestaurants.restaurants)
-        console.log(parsedRestaurants)
     }   )
 }
  const restoContainer = document.querySelector("#nashFood");
@@ -32,7 +31,6 @@ restoContainer.addEventListener("click", event => {
     if (event.target.id.startsWith("restaurantSaveButton")
     ) {let eventID = event.target.id.split("--")[1]
        let eventTitle = document.getElementById(eventID)
-       console.log(eventTitle)
         let restaurantSelection = document.querySelector("#restaurantSelection")
         restaurantSelection.appendChild(eventTitle)
         restoContainer.innerHTML = "";

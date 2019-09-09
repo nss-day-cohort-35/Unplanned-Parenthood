@@ -31,7 +31,6 @@ return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchTerm}&lo
     }).then(meetupData => meetupData.json())
     .then(parsedMeetupData => {
         addMeetupToDom(parsedMeetupData.events)
-        console.table(parsedMeetupData)
     })
 }
 
@@ -39,7 +38,6 @@ meetupContainer.addEventListener("click", event => {
     if (event.target.id.startsWith("MeetupSaveButton")
     ) {let eventID = event.target.id.split("--")[1]
        let eventTitle = document.getElementById(eventID)
-       console.log(eventTitle)
         let meetupSelection = document.querySelector("#meetupSelection")
         meetupSelection.appendChild(eventTitle)
         meetupContainer.innerHTML = "";
