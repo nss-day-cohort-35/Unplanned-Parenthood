@@ -7,3 +7,13 @@ footer {
 .resultButtons {
     list-style-type: none;
 }
+<<<<<<< HEAD
+=======
+/* body {
+    background-image: url(../images/hatchShow2.png);
+    background-position: center; 
+    background-size: auto;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+} */
+>>>>>>> 06aed7fbca49505e94a98fd38898a22dafb24d64
