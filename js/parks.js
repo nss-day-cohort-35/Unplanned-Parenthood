@@ -18,15 +18,15 @@ const parkContainer = document.querySelector("#nashParks");
 const parksNashville = (parksInNash) => {
     return `
     <h4 id="${parksInNash.park_name}">${parksInNash.park_name}</h4>
-    <p id="">${parksInNash.mapped_location_address}</p>
-    <p id="">${parksInNash.mapped_location_city}, ${parksInNash.mapped_location_state}</p>
+    <p>${parksInNash.mapped_location_address}</p>
+    <p>${parksInNash.mapped_location_city}, ${parksInNash.mapped_location_state}</p>
     <button type="button" id="parksSaveButton--">${parksInNash.restaurant="Save"}</button> 
     `
 } 
 
 parkContainer.addEventListener("click", event => {
     if(park.target.index.startsWith("parksSaveButton")){
-        let parkId = park.target.id.split("--")[1]
+        let parkId = park.target.park_name.split("--")[1]
         let parkTitle = document.getElementById(parkId)
         let parkSelection = document.querySelector("#parksSelection")
         parkSelection.innerHTML += eventTitle
